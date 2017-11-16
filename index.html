@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>velo-guide-map</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+    </head>
+    <body>
+        <main>
+            <section id='mapSection' class='map section'>
+                <nav class="filters">
+                    <select id="options">
+                        <option value="services">Services</option>
+                        <option value="stores">Stores</option>
+                        <option value="parkings">Parkings</option>
+                    </select>
+                </nav>
+                <article id='map' class="map content"></article>
+            </section>
+        </main>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="assets/js/map.js"></script>
+</html>
