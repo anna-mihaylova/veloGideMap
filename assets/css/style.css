@@ -11,6 +11,8 @@ body {
     background-color: #4d4d4d;
     left: 0;
     top: 0;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
 
 .map.content {
@@ -19,20 +21,17 @@ body {
     position: absolute;
     left: 5%;
     top: 10%;
-    background-color: #000;
+    z-index: 2;
 }
 
 .filters {
-    width: 20%;
-    height: 10%;
+    width: 12%;
+    height: 7%;
     position: absolute;
     right: 5%;
-    top: 0.5%;
-    cursor: pointer;
-    line-height: 3;
-    background: #4d4d4d;
+    top: 3%;
     overflow: hidden;
-    border-radius: 5%;
+    z-index: 3;
 }
 
 select {
@@ -42,10 +41,17 @@ select {
     padding: 3%;
     background-color: #4d4d4d;
     border-color: #4d4d4d;
-    font-size: 1.3em;
     text-transform: capitalize;
-    line-height: 0;
     cursor: pointer;
+}
+
+select:focus > option:checked {
+    background: #000 !important;
+    color: #4d4d4d !important;
+}
+
+select:active, select:hover, select {
+  outline: #4d4d4d;
 }
 
 .filters::after {
@@ -54,8 +60,52 @@ select {
     top: 0;
     right: 0;
     bottom: 0;
-    padding: 0 1em;
+    font-size: 0.8%;
+    padding: 0 0.9em;
     background: #000;
     color: #4d4d4d;
     pointer-events: none;
+}
+
+h1.name {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+p.type {
+    font-size: 1.1em;
+}
+
+#content a:link, a:visited {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#content a:hover, a:active {
+    color: #000;
+}
+
+.gm-style-iw {
+    background-color: #4d4d4d;
+    border: 1px solid #000;
+    border-radius: 5%;
+    box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+    color: #000 !important;
+    font-family: roboto;
+    text-align: center;
+    top: 15px !important;
+    width: 150px !important;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
