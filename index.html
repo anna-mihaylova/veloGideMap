@@ -10,12 +10,14 @@
     </head>
     <body>
         <main>
-            <section id='mapSection' class='map section'>
+            <section class='map section'>
+                <div class="img user"></div>
                 <nav class="filters">
                     <select id="options">
-                        <option value="services">Services</option>
-                        <option value="stores">Stores</option>
-                        <option value="parkings">Parkings</option>
+                        <option selected="selected" value="all"></i>All</option>
+                        <option value="service">Services</option>
+                        <option value="rent"></div>Rents</option>
+                        <option value="parking"></i>Parkings</option>
                     </select>
                 </nav>
                 <article id='map' class="map content"></article>
@@ -24,5 +26,9 @@
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="assets/js/object.js"></script>
     <script type="text/javascript" src="assets/js/map.js"></script>
+    <script type="text/javascript" src="assets/js/user.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </html>
